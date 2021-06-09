@@ -1,27 +1,13 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import ImageOne from "../../imgs/img1.jpg";
-import ImageTwo from "../../imgs/img2.jpg";
+import fakeData from "../../utilities/fakeData";
 import "./Content.css";
 
-const foodDetails = [
-  {
-    id: 1,
-    img: ImageOne,
-    name: "Chis Burger",
-    description: "Crispy, delicious",
-    price: 50,
-  },
-  {
-    id: 1,
-    img: ImageTwo,
-    name: "Chis Burger",
-    description: "Crispy, delicious",
-    price: 50,
-  },
-];
-
 const Content = () => {
+  const [foodDetails, setFoodDetails] = useState([]);
+  useEffect(() => {
+    setFoodDetails(fakeData.slice(0, 2));
+  }, []);
   return (
     <>
       <h1 className="md:text-5xl mt-5 text-center font-bold">Hot Product</h1>

@@ -7,6 +7,7 @@ import { useEffect, useState } from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Contact from "./components/Contact/Contact";
 import Home from "./components/Home/Home";
+import Menu from "./components/Menu/Menu";
 
 function App() {
   const [isOpen, setIsOpen] = useState(false);
@@ -32,6 +33,9 @@ function App() {
       <Switch>
         <Route exact path="/">
           <Home />
+        </Route>
+        <Route path="/menu">
+          <Menu />
         </Route>
         <Route path="/contact">
           <Contact />

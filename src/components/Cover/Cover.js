@@ -8,7 +8,7 @@ const Cover = () => {
         HOT BURGER
       </h1>
       <Link
-        to="/"
+        to="/menu"
         className="py-6 px-10 bg-yellow-500 rounded-full md:text-2xl sm:text-1xl hover:bg-yellow-300 transition duration-300 ease-in-out flex items-center animate-bounce"
       >
         Order Now{" "}
