@@ -1,0 +1,11 @@
+.card {
+  @apply flex flex-col justify-center items-center bg-white h-screen font-mono py-40;
+}
+
+.card__body {
+  @apply flex flex-col justify-center items-center;
+}
+
+.card__img {
+  @apply h-full rounded mb-10 shadow;
+}
