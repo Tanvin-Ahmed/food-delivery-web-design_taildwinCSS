@@ -31,7 +31,7 @@ const NavBar = ({ toggle }) => {
         <Link to="/menu" className="p-4">
           Menu
         </Link>
-        <Link to="/" className="p-4">
+        <Link to="/about" className="p-4">
           About
         </Link>
         <Link to="/contact" className="p-4">

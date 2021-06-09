@@ -8,6 +8,7 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Contact from "./components/Contact/Contact";
 import Home from "./components/Home/Home";
 import Menu from "./components/Menu/Menu";
+import About from "./components/About/About";
 
 function App() {
   const [isOpen, setIsOpen] = useState(false);
@@ -36,6 +37,9 @@ function App() {
         </Route>
         <Route path="/menu">
           <Menu />
+        </Route>
+        <Route path="/about">
+          <About />
         </Route>
         <Route path="/contact">
           <Contact />
