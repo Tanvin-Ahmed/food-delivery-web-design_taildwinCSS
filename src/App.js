@@ -1,12 +1,12 @@
 import logo from "./logo.svg";
 import "./App.css";
 import NavBar from "./components/NavBar/NavBar";
-import Cover from "./components/Cover/Cover";
-import Content from "./components/Content/Content";
 import Footer from "./components/Footer/Footer";
 import Dropdown from "./components/Dropdown/Dropdown";
 import { useEffect, useState } from "react";
-import { BrowserRouter as Router } from "react-router-dom";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import Contact from "./components/Contact/Contact";
+import Home from "./components/Home/Home";
 
 function App() {
   const [isOpen, setIsOpen] = useState(false);
@@ -29,8 +29,14 @@ function App() {
     <Router>
       <NavBar toggle={toggle} />
       <Dropdown isOpen={isOpen} toggle={toggle} />
-      <Cover />
-      <Content />
+      <Switch>
+        <Route exact path="/">
+          <Home />
+        </Route>
+        <Route path="/contact">
+          <Contact />
+        </Route>
+      </Switch>
       <Footer />
     </Router>
   );

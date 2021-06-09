@@ -34,7 +34,7 @@ const NavBar = ({ toggle }) => {
         <Link to="/" className="p-4">
           About
         </Link>
-        <Link to="/" className="p-4">
+        <Link to="/contact" className="p-4">
           Contact
         </Link>
       </div>
